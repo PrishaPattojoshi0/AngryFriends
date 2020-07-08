@@ -10,6 +10,11 @@ var bird, slingshot;
 var score = 0;
 var gameState = "onSling";
 
+function preload() {
+    //backgroundImg = loadImage("sprites/bg.png");
+    getBackgroundImg();
+}
+
 function setup(){
     var canvas = createCanvas(1200,400);
     engine = Engine.create();
@@ -35,6 +40,7 @@ function setup(){
 
     bird = new Bird(200,50);
 
+    //log6 = new Log(230,180,80, PI/2);
     slingshot = new SlingShot(bird.body,{x:200, y:50});
 }
 
@@ -99,10 +105,10 @@ async function getBackgroundImg(){
     var hour = datetime.slice(11,13);
 
     if (hour >= 06 && hour<=19){
-        bg = "sprites/bg.png";
+        bg = "bg.png";
     }
     else{
-        bg = "sprites/bg2.jpg";
+        bg = "bg2.jpg";
     }
     backgroundImg = loadImage(bg);
     console.log(backgroundImg);
