@@ -11,7 +11,7 @@ var score = 0;
 var gameState = "onSling";
 
 function preload() {
-    //backgroundImg = loadImage("bg.png");
+    backgroundImg = loadImage("bg.jpg");
     getBackgroundImg();
 }
 
@@ -105,10 +105,10 @@ async function getBackgroundImg(){
     var hour = datetime.slice(11,13);
 
     if (hour >= 06 && hour<=19){
-        bg = "bg.png";
+        bg = "bg.jpg";
     }
     else{
-        bg = "bg2.jpg";
+        bg = "bg.jpg";
     }
     backgroundImg = loadImage(bg);
     console.log(backgroundImg);
